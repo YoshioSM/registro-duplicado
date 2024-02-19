@@ -1,10 +1,10 @@
 <?php
 // <!-- Elaborado por Yoshio Soto Montes -->
 // Conexión a la base de datos
-$host = "localhost:3306";
-$db_user = "halzacom_halza_enc";
-$db_pass = "Halza.1234";
-$db_name = "halzacom_formulario";
+$host = "localhost";
+$db_user = "username";
+$db_pass = "password";
+$db_name = "test";
 
 $conexion = mysqli_connect($host, $db_user, $db_pass, $db_name);
 
