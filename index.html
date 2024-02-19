@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Elaborado por Yoshio Soto Montes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halza</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            gap: 10px; /* Espacio entre los apellidos */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-xl">
+        <h1 class="text-2xl font-bold mb-4">Registro</h1>
+        <form action="procesar_formulario.php" method="post">
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 font-bold">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="w-full p-2 border rounded-md" required>
+            </div>
+            <div class="mb-4 flex-container">
+                <div>
+                    <label for="apellido_paterno" class="block text-gray-700 font-bold">Apellido paterno:</label>
+                    <input type="text" id="apellido_paterno" name="apellido_paterno" class="w-full p-2 border rounded-md" required>
+                </div>
+                <div>
+                    <label for="apellido_materno" class="block text-gray-700 font-bold">Apellido materno:</label>
+                    <input type="text" id="apellido_materno" name="apellido_materno" class="w-full p-2 border rounded-md" required>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="opciones1" class="block text-gray-700 font-bold">Sucursal:</label>
+                <select name="opciones1"id="opciones1" class="w-full p-2 border rounded-md">
+                    <option value="Sucursal Apodaca">Sucursal Apodaca</option>
+                    <option value="Sucursal Ciénega F">Sucursal Ciénega F.</option>
+                    <option value="Sucursal Escobedo">Sucursal Escobedo</option>
+                     <option value="Sucursal Santa Catarina">Sucursal Santa Catarina</option>
+                     <option value="Sucursal Polaris">Sucursal Polaris</option>
+                    <option value="Sucursal Guadalupe">Sucursal Guadalupe</option>
+                </select>
+            </div>
+            
+            <div class="mb-4">
+                <label for="opciones2" class="block text-gray-700 font-bold">Agencia:</label>
+                <select name="opciones2" id="opciones2" class="w-full p-2 border rounded-md">
+                    <option value="AYY">AYY</option>
+                    <option value="Hunter7">Hunter7</option>
+                    <option value="Prodensa">Prodensa</option>
+                    <option value="Jinzai">Jinzai</option>
+					<option value="Polaris internos">Polaris internos</option>
+                </select>
+            </div>
+            
+            <div class="mb-4">
+                <label for="clave" class="block text-gray-700 font-bold">CURP:</label>
+                <input type="text" id="clave" name="clave" class="w-full p-2 border rounded-md" required pattern=".{18}">
+            </div>
+            
+            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600">Enviar</button>
+        </form>
+    </div>
+
+
+    <script>
+        document.getElementById("clave").addEventListener("input", function() {
+    if (this.value.length > 18) {
+        this.value = this.value.slice(0, 18); // Limita a 18 caracteres
+    }
+});
+
+  // Agregar un evento change a las opciones 1
+  document.getElementById("opciones1").addEventListener("change", function () {
+       
+    });
+
+    // Agregar un evento change a las opciones 2
+    document.getElementById("opciones2").addEventListener("change", function () {
+     
+    });
+    </script>
+</body>
+</html>
+
+
