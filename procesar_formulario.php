@@ -2,8 +2,8 @@
 // <!-- Elaborado por Yoshio Soto Montes -->
 // Conexión a la base de datos
 $host = "localhost";
-$db_user = "username";
-$db_pass = "password";
+$db_user = "root";
+$db_pass = "";
 $db_name = "test";
 
 $conexion = mysqli_connect($host, $db_user, $db_pass, $db_name);
